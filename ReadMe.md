@@ -9,7 +9,7 @@ The task is to create an application that accepts an outcode as a parameter. The
 * Rating
 * Typesoffoodfortherestaurant.
 
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
+[![Watch the video]()](https://www.youtube.com/watch?v=1sdGkRze_O4)
 
 ### User Stories ### 
 * As a user running the application
