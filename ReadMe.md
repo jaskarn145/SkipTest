@@ -9,7 +9,7 @@ The task is to create an application that accepts an outcode as a parameter. The
 * Rating
 * Typesoffoodfortherestaurant.
 
-[![Watch the video]()](https://www.youtube.com/watch?v=1sdGkRze_O4)
+
 
 ### User Stories ### 
 * As a user running the application
@@ -66,6 +66,8 @@ Two of those are snapshot testing of Dashboard screen and App .
 One test is written for element check of searchbar ,because that the main element of app.
 
 
+## App Screen Video
+[![Watch the video](https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/youtube-logo.png?auto=format&q=60&fit=max&w=930)](https://www.youtube.com/watch?v=1sdGkRze_O4)
 
 ## Scripts
 
