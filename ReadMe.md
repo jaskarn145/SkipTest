@@ -10,18 +10,18 @@ The task is to create an application that accepts an outcode as a parameter. The
 * Typesoffoodfortherestaurant.
 
 ### User Stories ### 
-As a user running the application
-I can view a list of restaurants in a user submitted outcode (e.g. SE19)
-So that I know which restaurants are currently available.
-As a user running the application
-I can view the restaurant logo alongside restaurant information
-So that I know exactly which restaurants are currently available.
-As a user running the application
-I can tap on a restaurant
-So that I can see additional information about it
+* As a user running the application
+* I can view a list of restaurants in a user submitted outcode (e.g. SE19)
+* So that I know which restaurants are currently available.
+* As a user running the application
+* I can view the restaurant logo alongside restaurant information
+* So that I know exactly which restaurants are currently available.
+* As a user running the application
+* I can tap on a restaurant
+* So that I can see additional information about it
 
 Acceptance criteria:
-For the known outcode ec4m, results are returned;
+* For the known outcode ec4m, results are returned;
 
 * The name, cuisine types and rating of the restaurant are displayed;
 * For the restaurant additional information, address, opening and delivery times and deals are
