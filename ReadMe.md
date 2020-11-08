@@ -55,6 +55,7 @@ after selecting the specific restaurant user can see the details of restaurant
 7) Opening time (using moment library and API)
 8) Delivery Time (using moment library and API)
 9) delivery estimation time (eta)
+10) Is there any deal available on the restaurant other-wise it will show "No deal available in this Restaurant"
 
 
 I have included 3 tests in this react native project
