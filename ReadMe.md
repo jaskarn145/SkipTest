@@ -30,23 +30,23 @@ displayed.
 
 ## Available Scripts
 
-To install the packages.
-### `yarn install`  
+### To install the packages.
+ `yarn install`  
 
-To install iOS pods.
-### `cd ios && pod install` 
+### To install iOS pods.
+ `cd ios && pod install` 
 
-To start the bundler.
-### `yarn start` 
+### To start the bundler.
+  `yarn start` 
 
-To run the application in iOS.
-### `yarn ios`
+### To run the application in iOS.
+  `yarn ios`
 
-To run the application in android.
-### `yarn android`
+### To run the application in android.
+  `yarn android`
 
-To test the application code.
-### `yarn test`
+### To test the application code.
+  `yarn test`
 
 
 
