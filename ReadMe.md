@@ -9,6 +9,8 @@ The task is to create an application that accepts an outcode as a parameter. The
 * Rating
 * Typesoffoodfortherestaurant.
 
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
+
 ### User Stories ### 
 * As a user running the application
 * I can view a list of restaurants in a user submitted outcode (e.g. SE19)
