@@ -3,7 +3,8 @@
 
 ### Coding test ###
 
-Thetaskistocreateanapplicationthatacceptsanoutcodeasaparameter.TheapplicationshouldthendisplaythefollowinginformationabouteachrestaurantthatdeliverstothatoutcodebyqueryingourAPI:
+The task is to create an application that accepts an outcode as a parameter. The application should then display the following information about each restaurant that delivers to that outcode by querying our API:
+
 * Name
 * Rating
 * Typesoffoodfortherestaurant.
@@ -22,8 +23,8 @@ So that I can see additional information about it
 Acceptance criteria:
 For the known outcode ec4m, results are returned;
 
-# The name, cuisine types and rating of the restaurant are displayed;
-# For the restaurant additional information, address, opening and delivery times and deals are
+* The name, cuisine types and rating of the restaurant are displayed;
+* For the restaurant additional information, address, opening and delivery times and deals are
 displayed.
 
 
