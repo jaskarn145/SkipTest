@@ -20,7 +20,7 @@ const ItemView: any = (props) => {
             <View style={styles.imageItem} >
                 <Image
                     source={{ uri: item.LogoUrl }}
-                    style={{ height: 100, width: 100 }}
+                    style={styles.image}
                     resizeMode={"cover"} />
             </View>
             <View style={styles.containerDesc}>
@@ -28,7 +28,7 @@ const ItemView: any = (props) => {
                     <Text style={styles.nameItem}>
                         {item.Name.toUpperCase()}
                         {"  "}
-                        {item.IsNew ? <Text style={styles.IsNew} >{" New "}</Text> : null}
+                        {item.IsNew ? <Text style={styles.isNew} >{" New "}</Text> : null}
                     </Text>
                     <Text style={styles.rating} >{item.RatingAverage}</Text>
                 </View>
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     cuisines: {
         fontStyle: 'italic'
     },
-    IsNew: {
+    isNew: {
         width: 57,
         height: 30,
         borderRadius: 15,
@@ -89,6 +89,10 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         padding: 5,
         marginVertical: 7
+    },
+    image :{
+        height: 100,
+        width: 100 
     }
 });
 
