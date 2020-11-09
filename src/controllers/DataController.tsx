@@ -1,7 +1,6 @@
 /**
  * DataController.
  *  This controller get the data and send to dashboard component after fetching from API .
- *
  */
 class DataController {
     getRestaurants = async (postalCode: String) => {

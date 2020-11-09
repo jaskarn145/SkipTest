@@ -5,7 +5,6 @@
  * @format
  * @flow strict-local
  */
-
 import React from 'react';
 import {
   SafeAreaView
@@ -21,6 +20,4 @@ const App = () => {
     </SafeAreaView>
   )
 }
-
-
 export default App;

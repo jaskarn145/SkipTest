@@ -3,17 +3,15 @@
  *
  *this is main screen of app 
  */
-
 import React, { useState, useEffect } from 'react';
 import { Text, StyleSheet, View, FlatList, TextInput, Button } from 'react-native';
 import Modal from 'react-native-modal';
 import Spinner from 'react-native-loading-spinner-overlay';
 import Colors from '../constants/Colors';
 import DataController from '../controllers/DataController';
-import ItemView from '../Views/ItemView';
+import ItemView from '../views/ItemView';
 import Message from '../components/Message';
 import RestaurantInfo from '../components/RestaurantInfo';
-
 
 const DashBoard = () => {
     //using usestate hook for setting up the input value of searchbar 
@@ -67,19 +65,17 @@ const DashBoard = () => {
     return (
         <View>
             {isRestaurantVisible ?
-                <View style={{ flex: 1 }}>
+                <View style={styles.outerContainer}>
                     <Modal isVisible={isRestaurantVisible}  >
                         <View style={styles.containerRestInfo}>
                             <Button title="Back" onPress={toggleModal} />
-                            <RestaurantInfo inFo={restModalData} />
+                            <RestaurantInfo info={restModalData} />
                         </View>
                     </Modal>
                 </View>
                 :
                 null
             }
-
-
             <View style={styles.container}>
                 <Spinner
                     visible={loading}
@@ -89,7 +85,7 @@ const DashBoard = () => {
             </View>
             <TextInput
                 defaultValue={textField}
-                style={styles.InputField}
+                style={styles.inputField}
                 placeholder="Search Here..."
                 testID={'SearchBar'}
                 onChangeText={(text) => setTextField(text)}
@@ -107,7 +103,6 @@ const DashBoard = () => {
                         onEndReachedThreshold={0.5}
                         numColumns={1}
                         scrollEventThrottle={400}
-
                     />
                 </View>
             }
@@ -116,7 +111,7 @@ const DashBoard = () => {
 };
 
 const styles = StyleSheet.create({
-    InputField: {
+    inputField: {
         backgroundColor: Colors.White,
         borderColor: 'black',
         width: '95%',
@@ -133,9 +128,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         textAlign: 'center',
-        // paddingTop: 30,
         backgroundColor: Colors.Gray,
-
     },
     spinnerTextStyle: {
         color: '#FFF',
@@ -146,9 +139,10 @@ const styles = StyleSheet.create({
     containerRestInfo: {
         flex: 1,
         backgroundColor: Colors.White
-
+    },
+    outerContainer: {
+        flex: 1
     }
-
 });
 
 export default DashBoard;

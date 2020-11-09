@@ -1,25 +1,19 @@
 /*
  *Header 
  */
-
 import React from 'react';
 import {
     StyleSheet,
     View,
     Text
-
 } from 'react-native';
 import Colors from '../constants/Colors';
 
-const Header: any = () => {
-    return (
-        <View style={styles.logo}>
-            <Text style={styles.textlogo}>CODE TEST</Text>
-        </View>
-    )
-
-}
-
+const Header: React.FC = () => (
+    <View style={styles.logo}>
+        <Text style={styles.textlogo}>CODE TEST</Text>
+    </View>
+)
 
 const styles = StyleSheet.create({
     logo: {

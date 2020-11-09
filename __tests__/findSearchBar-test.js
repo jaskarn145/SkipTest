@@ -11,7 +11,6 @@ const findSearchInput = (tree, element) => {
         if (tree.children[Node].props.testID == element) {
             result = true;
         }
-
     }
     return result;
 }

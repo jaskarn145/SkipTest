@@ -8,17 +8,14 @@ import React from 'react';
 import {
     StyleSheet,
     Text,
-
 } from 'react-native';
 
-const Message = (props) => {
-    return (
-        <Text style={[styles.NoDataFound, { color: props.Textcolor }]}>{props.children}</Text>
-    )
-};
+const Message = (props) => (
+    <Text style={[styles.noDataFound, { color: props.Textcolor }]}>{props.children}</Text>
+)
 
 const styles = StyleSheet.create({
-    NoDataFound: {
+    noDataFound: {
         fontSize: 20,
         fontStyle: 'italic',
         fontWeight: '800',

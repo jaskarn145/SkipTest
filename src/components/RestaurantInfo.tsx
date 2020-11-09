@@ -3,7 +3,6 @@
  *
  *this component is used to display the particular restaurant in modal on click from list
  */
-
 import React from 'react';
 import {
     StyleSheet,
@@ -14,35 +13,35 @@ import {
 } from 'react-native';
 import moment from "moment";
 import Colors from '../constants/Colors';
+
 const RestaurantInfo = (props) => {
-    const item = props.inFo;
+    const item = props.info;
 
     return (
-        <ScrollView style={styles.container}   >
-            <View  >
+        <ScrollView style={styles.container} >
+            <View>
                 <Image
                     source={{ uri: item.LogoUrl }}
-                    style={styles.ImageItem}
+                    style={styles.imageItem}
                     resizeMode={"cover"} />
             </View>
             <View style={styles.containerDesc}>
                 <View>
                     <View>
-                        <Text style={styles.NameItem}>
+                        <Text style={styles.nameItem}>
                             {item.Name.toUpperCase()}
                             {"  "}
-                            {item.IsNew ? <Text style={styles.IsNew} >{" New "}</Text> : null}
+                            {item.IsNew ? <Text style={styles.isNew} >{" New "}</Text> : null}
                         </Text>
                     </View>
                     <View style={styles.containerRating}>
                         <Text style={styles.rating} >{item.RatingAverage}</Text>
-                        {item.IsOpenNow ? <Text style={styles.IsOpenNow} >Open</Text> : <Text style={styles.IscloseNow} >Close</Text>}
+                        {item.IsOpenNow ? <Text style={styles.isOpenNow} >Open</Text> : <Text style={styles.iscloseNow} >Close</Text>}
                     </View>
                 </View>
                 <Text style={styles.cuisines}  >
                     {item.CuisineTypes.map((e) => e.Name).join(', ')}
                 </Text>
-
                 <Text style={styles.times}  >
                     Opening Time:{" "}
                     {moment(item.OpeningTimeLocal).format("LT")}
@@ -51,13 +50,10 @@ const RestaurantInfo = (props) => {
                     {moment(item.DeliveryOpeningTimeLocal).format("LT")}
                     {" "}(Eta {item.DeliveryEtaMinutes.RangeLower}-{item.DeliveryEtaMinutes.RangeUpper} Min)
                 </Text>
-                {/* {item.Deals.Description ? */}
                 <Text style={styles.deals}>
                     {item.Deals.length > 0 ? ' Popular Deals:' + item.Deals.map((e) => e.Description).join(', ') : ' No Deal on This reastaurant'}
                     { }
                 </Text>
-                {/* : null
-                } */}
             </View>
         </ScrollView>
     )
@@ -71,9 +67,8 @@ const styles = StyleSheet.create({
         borderColor: 'gray',
         borderWidth: 1,
         backgroundColor: '#f5f5f5'
-        // backgroundColor: '#f2eded'
     },
-    ImageItem: {
+    imageItem: {
         width: '100%',
         height: 250,
         overflow: "hidden",
@@ -84,8 +79,7 @@ const styles = StyleSheet.create({
     containerDesc: {
         paddingLeft: 10,
     },
-
-    NameItem: {
+    nameItem: {
         fontSize: 17,
         fontWeight: '700',
         width: '90%'
@@ -107,8 +101,7 @@ const styles = StyleSheet.create({
     cuisines: {
         fontStyle: 'italic'
     },
-
-    IsOpenNow: {
+    isOpenNow: {
         width: 57,
         height: 30,
         borderRadius: 15,
@@ -119,7 +112,7 @@ const styles = StyleSheet.create({
         padding: 5,
         marginVertical: 7
     },
-    IscloseNow: {
+    iscloseNow: {
         width: 57,
         height: 30,
         borderRadius: 15,
@@ -130,7 +123,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         marginVertical: 7
     },
-    IsNew: {
+    isNew: {
         width: 57,
         height: 30,
         borderRadius: 15,
@@ -154,9 +147,7 @@ const styles = StyleSheet.create({
         fontStyle: 'italic',
         backgroundColor: Colors.Primary,
         textAlign: 'center'
-
     }
-
 });
 export default RestaurantInfo;
 

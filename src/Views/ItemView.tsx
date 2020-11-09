@@ -3,7 +3,6 @@
  *
  *this component is used to display the all restaurants in flatlist
  */
-
 import React from 'react';
 import {
     StyleSheet,
@@ -18,7 +17,7 @@ const ItemView: any = (props) => {
 
     return (
         <TouchableOpacity activeOpacity={0.8} style={styles.container} onPress={props.passRestaurantData.bind(this, item)} >
-            <View style={styles.ImageItem} >
+            <View style={styles.imageItem} >
                 <Image
                     source={{ uri: item.LogoUrl }}
                     style={{ height: 100, width: 100 }}
@@ -26,7 +25,7 @@ const ItemView: any = (props) => {
             </View>
             <View style={styles.containerDesc}>
                 <View>
-                    <Text style={styles.NameItem}>
+                    <Text style={styles.nameItem}>
                         {item.Name.toUpperCase()}
                         {"  "}
                         {item.IsNew ? <Text style={styles.IsNew} >{" New "}</Text> : null}
@@ -37,14 +36,9 @@ const ItemView: any = (props) => {
                     {item.CuisineTypes.map((e) => e.Name).join(', ')}
                 </Text>
             </View>
-
-
         </TouchableOpacity>
-
-
-
     )
-}
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -55,9 +49,8 @@ const styles = StyleSheet.create({
         borderColor: 'gray',
         borderWidth: 1,
         backgroundColor: '#f5f5f5'
-        // backgroundColor: '#f2eded'
     },
-    ImageItem: {
+    imageItem: {
         width: 100,
         height: 100,
         borderRadius: 100 / 2,
@@ -68,7 +61,7 @@ const styles = StyleSheet.create({
     containerDesc: {
         paddingLeft: 10,
     },
-    NameItem: {
+    nameItem: {
         fontSize: 15,
         fontWeight: '700',
         width: '90%'
@@ -97,7 +90,6 @@ const styles = StyleSheet.create({
         padding: 5,
         marginVertical: 7
     }
-
 });
 
 export default ItemView;
