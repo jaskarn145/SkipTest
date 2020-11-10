@@ -12,7 +12,7 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-const ItemView: any = (props) => {
+const ItemView = (props) => {
     const item = props.restaurant;
 
     return (
